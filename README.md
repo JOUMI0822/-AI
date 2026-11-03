@@ -1,5 +1,4 @@
-import os, textwrap
-html = r'''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -125,7 +124,4 @@ cvs.addEventListener('click',e=>{let rect=cvs.getBoundingClientRect(),scale=cvs.
 $('size').onchange=reset;$('human').onchange=reset;$('new').onclick=reset;$('undo').onclick=undo;$('pass').onclick=()=>passMove();$('analyze').onclick=analyze;$('review').onclick=review;$('save').onclick=save;$('loadBtn').onclick=()=>$('load').click();$('load').onchange=async e=>{let f=e.target.files[0];if(!f)return;try{loadSGF(await f.text())}catch(err){alert(err.message)}e.target.value=''};
 reset();
 </script>
-</body></html>'''
-path='/mnt/data/GoMaster_AI_v0.1.html'
-with open(path,'w',encoding='utf-8') as f:f.write(html)
-print(path, os.path.getsize(path))
+</body></html>
